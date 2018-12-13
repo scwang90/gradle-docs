@@ -6,20 +6,20 @@
 
 为了有效地使用Gradle，您需要知道它是什么，并理解它的一些基本概念。所以在你认真使用Gradle之前，我们强烈推荐你阅读 [什么是Gradle?](https://docs.gradle.org/current/userguide/what_is_gradle.html#what_is_gradle)
 
-即使你有使用Gradle的经验，我们建议你阅读[5部分你需要知道关于Gradle五个部分](https://docs.gradle.org/current/userguide/what_is_gradle.html#five_things)，因为它澄清了一些常见的误解。
+即使你有使用Gradle的经验，我们建议你阅读[关于Gradle你需要知道的5件事](https://docs.gradle.org/current/userguide/what_is_gradle.html#five_things)，因为它澄清了一些常见的误解。
 
 ## 安装
 
-如果您只想运行现有的Gradle项目，那么如果项目有一个 [Gradle Wrapper](https://docs.gradle.org/current/userguide/gradle_wrapper.html#gradle_wrapper)，可以通过项目根目录中的文件 *gradlew*  或 *gradlew* 识别，那么您就不需要安装Gradle。您只需要确保您的系统满足 [Gradle的先决条件](https://docs.gradle.org/current/userguide/installation.html#sec:prerequisites)。
+如果您只想运行现有的Gradle项目，如果项目中带有 [Gradle Wrapper](https://docs.gradle.org/current/userguide/gradle_wrapper.html#gradle_wrapper)，可以通过项目根目录中的文件 *gradlew*  或 *gradlew* 识别，那么您就不需要安装Gradle。您只需要确保您的系统满足 [Gradle的先决条件](https://docs.gradle.org/current/userguide/installation.html#sec:prerequisites)。
 
-Android Studio附带了一个可工作的Gradle，所以在这种情况下你不需要单独安装Gradle。
+**Android Studio** 自己附带了一个 Gradle，所以在这种情况下也不需要单独安装Gradle。
 
 为了创建新的项目或向现有构建添加 Wrapper(包装器)，您需要根据这些 [说明](./installation.md) 安装Gradle。请注意，除了页面上描述的方法之外，可能还有其他方法来安装Gradle，因为不可能列举所有的包管理器。
 
 
 ## 尝试使用Gradle
 
-积极使用Gradle是一个很好的学习它的方法，所以一旦你安装了Gradle，尝试一个介绍性的实践教程:
+积极使用Gradle是一个很好的学习它的方法，所以一旦你安装了Gradle，尝试下列介绍性的实践教程:
 
 - [创建基础Gradle项目](https://guides.gradle.org/creating-new-gradle-builds/)
 - [构建Android应用程序](https://guides.gradle.org/building-android-apps/)
@@ -47,16 +47,16 @@ Android Studio附带了一个可工作的Gradle，所以在这种情况下你不
 要么用IDE导入构建，要么从命令行运行gradle项目。如果只列出根项目，则为单个项目。否则，它是一个 [多项目结构](https://docs.gradle.org/current/userguide/intro_multi_project_builds.html#intro_multi_project_builds)。
 
 3. 找出可以运行哪些任务。  
-如果您已经将项目导入IDE，那么您能够访问一个显示所有可用任务的视图。从命令行运行 `gradle 任务`。
+如果您已经将项目导入IDE，那么您能够访问一个显示所有可用任务的视图。从命令行运行 `gradle <taskname>`。
 
 4. 通过了解更多关于任务的信息可以通过命令 `gradle help --task <taskname>`。  
 gradle help 可以显示关于任务的额外信息，包括哪些项目包含该任务以及该任务支持哪些选项。
 
 5. 运行您感兴趣的任务。  
-许多基于约定的构建与Gradle的生命周期任务集成在一起，所以当您没有更具体的想要在构建中做的事情时，请使用这些构建。例如，大多数构建都有清理、检查、组装和构建任务。  
+许多遵守标准约定的Gradle项目都集成了一套生命周期任务，所以当您没有更具体的想要在构建中做的事情时，可以直接使用这些构建。例如，大多数项目构建都有清理、检查、组装和构建等任务。  
 在命令行中，只需运行 `gradle <taskname>` 命令就可以执行指定的任务。有关命令行执行的更多信息，请参阅相应的 [用户手册一章](https://docs.gradle.org/current/userguide/command_line_interface.html#command_line_interface)。如果您正在使用IDE，请查看它的文档，了解如何运行任务。
 
-Gradle项目统筹都遵守标准的项目结构和约定的任务，如果你熟悉其他相同类型的项目，如 Java、Android 或者 系统原生项目，那么文件和目录结构、任务和项目属性都相差无几。
+Gradle项目都遵守标准的项目结构和约定的任务，如果你熟悉其他相同类型的项目，如 Java、Android 或者 系统原生项目，那么文件和目录结构、任务和项目属性都相差无几。
 
 对于更专业化的项目或需要高度定制的项目，理想情况下您应该能够访问关于如何运行项目构建以及可以配置哪些 [构建属性](https://docs.gradle.org/current/userguide/build_environment.html#build_environment) 的文档.
 
@@ -64,7 +64,7 @@ Gradle项目统筹都遵守标准的项目结构和约定的任务，如果你�
 
 学习创建和维护Gradle项目是一个过程，需要一点时间。我们建议您从适合您的项目的核心插件及其约定开始，然后随着您对该工具的了解越来越多，逐步合并定制。
 
-下面时一些在你逐步掌握Gradle旅程中第一步非常有用的要点：
+下面是一些在你第一步掌握Gradle旅程中非常有用的要点：
 
 1. 尝试一到两个 [基本教程](#尝试使用Gradle)，看看Gradle构建是什么样子的，特别是那些与您使用的项目类型(Java、native、Android等等)匹配的类型。
 
