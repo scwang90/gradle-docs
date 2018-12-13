@@ -8,7 +8,7 @@
 
 ## 准备
 
-Gradle 可以在所有主流的操作系统上运行，只要安装了 [Java Development Kit](http://jdk.java.net/)(Jdk) 并且版本为 1.8 或者更高的版本。要查看安装的 Java 版本，可以在哎命令行中输入 `java -version`， 你应该会看到如下信息：
+Gradle 可以在所有主流的操作系统上运行，只要安装了 [Java Development Kit](http://jdk.java.net/)(Jdk) 并且版本为 1.8 或者更高的版本。要查看安装的 Java 版本，可以在命令行中输入 `java -version`， 你应该会看到如下信息：
 
 ```
 ❯ java -version
@@ -19,7 +19,7 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.151-b12, mixed mode)
 
 Gradle自己附带了Groovy库，因此不需要再安装Groovy。任何外部安装的Groovy安装都会被Gradle忽略。
 
-Gradle会使用您环境变量 `path` 中配置的任何 Jdk 版本。所以您可以配置环境变量 `JAVA_HOME` 只想所需JDK的安装路径。
+Gradle会使用您环境变量 `path` 中配置的任何 Jdk 版本。所以您可以配置环境变量 `JAVA_HOME` 指向所需JDK的安装路径。
 
 ## 包管理器安装
 
@@ -59,11 +59,11 @@ Gradle会使用您环境变量 `path` 中配置的任何 Jdk 版本。所以您�
 
 ### 步骤1、下载最新的Gradle发行版
 
-发行版ZIP文件有两种风格:
+**Gradle Zip文件** 有两种风格:
  - 只包含可执行的二进制文件
  - 附带文档和源代码的完整版
 
-如果需要使用旧版本，可以参阅  [发布页面](https://gradle.org/releases)。
+如果需要使用旧版本，可以参阅 [发布页面](https://gradle.org/releases)。
 
 ### 步骤2、解压缩
 
@@ -83,23 +83,11 @@ LICENSE  NOTICE  bin  getting-started.html  init.d  lib  media
 
 打开另一个**文件浏览器**窗口并进入 Gradle 的下载目录。鼠标双击 zip 浏览内容，拖动内容文件夹 `gradle-5.0` 到新创建的 `C:\Gradle` 文件夹。
 
-或者，您可以使用自己喜欢的压缩软件 **Gradle ZIP** 解压到 `C:\Gradle` 文件夹中。
+或者，您可以使用自己喜欢的压缩软件把 **Gradle Zip 文件** 解压到 `C:\Gradle` 文件夹中。
 
-Step 3. Configure your system environment
-For running Gradle, firstly add the environment variable GRADLE_HOME. This should point to the unpacked files from the Gradle website. Next add GRADLE_HOME/bin to your PATH environment variable. Usually, this is sufficient to run Gradle.
-
-Linux & MacOS users
-Configure your PATH environment variable to include the bin directory of the unzipped distribution, e.g.:
-
-❯ export PATH=$PATH:/opt/gradle/gradle-5.0/bin
-Microsoft Windows users
-In File Explorer right-click on the This PC (or Computer) icon, then click Properties → Advanced System Settings → Environmental Variables.
-
-Under System Variables select Path, then click Edit. Add an entry for C:\Gradle\gradle-5.0\bin. Click OK to save.
 ### 步骤3、配置系统环境
 
-要运行Gradle，首先要添加环境变量 `GRADLE_HOME` 指向从Gradle安装的文件夹 `C:\Gradle`。然后，将 `GRADLE_HOME/bin` 添加到 `path` 环境变量中。这样就可以运行Gradle了。
-
+要运行Gradle，首先要添加环境变量 `GRADLE_HOME` 指向Gradle安装的文件夹 `C:\Gradle`。然后，将 `GRADLE_HOME/bin` 添加到 `path` 环境变量中。这样就可以运行Gradle了。
 
 #### Linux和MacOS用户
 配置您的PATH环境变量，以包含未压缩分发版的bin目录，例如:
@@ -109,15 +97,15 @@ Under System Variables select Path, then click Edit. Add an entry for C:\Gradle\
 ```
 
 #### 微软Windows用户
-文件资源管理器中右键单击 **这台电脑**(或**计算机**) 图标，然后单击→`属性`→`高级`→`环境变量`。
+文件资源管理器中右键单击 **这台电脑**(或**计算机**) 图标，然后单击 → `属性` → `高级` → `环境变量`。
 
-在`系统变量`下选择`Path`，然后单击 `编辑` 为 `C:\Gradle\Gradle-5.0\bin`添加一个条目。单击`确定`保存。
+在 `系统变量` 下选择 `Path` ，然后单击 `编辑` 为 `C:\Gradle\Gradle-5.0\bin`添加一个条目。单击`确定`保存。
 
 [↓Proceed to next steps](#下一步)
 
 ## 验证安装
 
-打开控制台(或Windows命令提示符)，运行`gradle -v`，运行gradle并显示版本，例如:
+打开控制台(或Windows命令提示符)，运行 `gradle -v` ，运行gradle并显示版本，例如:
 
 ```
 ❯ gradle -v
@@ -134,8 +122,8 @@ Ant:          Apache Ant(TM) version 1.9.9 compiled on February 2 2017
 JVM:          1.8.0_151 (Oracle Corporation 25.151-b12)
 OS:           Mac OS X 10.13.3 x86_64
 ```
-如果遇到任何问题，请参阅有关故[障排除安装](https://docs.gradle.org/current/userguide/troubleshooting.html#sec:troubleshooting_installation)的部分。
-您可以通过下载SHA-256文件（可从 [发布页面] (https://gradle.org/releases)获得）并遵循这些 [验证说明](https://docs.gradle.org/current/userguide/gradle_wrapper.html#sec:verification) 来验证Gradle发行版的完整性。
+如果遇到任何问题，请参阅有关故 [障排除安装](https://docs.gradle.org/current/userguide/troubleshooting.html#sec:troubleshooting_installation) 的部分。
+您可以通过下载SHA-256文件（可从 [发布页面](https://gradle.org/releases) 获得）并遵循这些 [验证说明](https://docs.gradle.org/current/userguide/gradle_wrapper.html#sec:verification) 来验证Gradle发行版的完整性。
 
 ## 下一步
 
