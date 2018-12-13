@@ -1,8 +1,8 @@
-# Gradle 手册目录[自译版]
+# Gradle 手册目录
 
 ## 手册分类
 
- - [用户手册](./userguide.md)
+ - [用户手册](/art/userguide.md)
  - [教程和指南](https://guides.gradle.org/)
  - [版本发布](https://docs.gradle.org/current/release-notes.html)
  - Gradle Api
@@ -15,8 +15,8 @@
 
 ## 用户手册
 
- - [入门指南](https://docs.gradle.org/current/userguide/getting_started.html)
- - [Gradle安装](./installation.md)
+ - [入门指南](./getting_started.md)
+ - [Gradle安装](https://docs.gradle.org/current/userguide/installation.html)
  - [Gradle升级](https://docs.gradle.org/current/userguide/upgrading_version_4.html)
  - 迁移到Gradle
  > 1. [从Maven迁移](https://guides.gradle.org/migrating-from-maven/)
@@ -32,7 +32,7 @@
 
  - [多项目构建](https://docs.gradle.org/current/userguide/intro_multi_project_builds.html)
  - [创建构建扫描](https://guides.gradle.org/creating-build-scans/)
- - Optimizing Build Times
+ - 优化构建时间
  > 1. [构建性能指南](https://guides.gradle.org/performance/)
  > 2. [启用和配置构建缓存](https://docs.gradle.org/current/userguide/build_cache.html)
  - [集成单独的Gradle构建(复合构建)](https://docs.gradle.org/current/userguide/composite_builds.html)
@@ -83,7 +83,7 @@
  > 1. [任务延迟](https://docs.gradle.org/current/userguide/lazy_configuration.html)
  > 2. [并行任务](https://guides.gradle.org/using-the-worker-api/)
  > 3. [使用TestKit测试构建](https://docs.gradle.org/current/userguide/test_kit.html)
- > 4. [在Gradle中使用Ant]
+ > 4. [在Gradle中使用Ant](https://docs.gradle.org/current/userguide/ant.html)
  - Gradle示例项目
  > 1. [Groovy DSL 示例](https://github.com/gradle/gradle/tree/master/subprojects/docs/src/samples)
  > 2. [Kotlin DSL 示例](https://github.com/gradle/kotlin-dsl/tree/master/samples)
