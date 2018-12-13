@@ -17,7 +17,7 @@ Gradle是一个关注灵活性和性能的开源自动化构建工具。Gradle�
 
 ## 创建基于Gradle的项目
 
-学习Gradle非常简单！首先，按照使用手册[下载并安装](https://docs.gradle.org/current/userguide/installation.html#installing_gradle), 然后查看 [入门指南](https://gradle.org/guides/#getting-started) 来创建您的第一个项目。
+学习Gradle非常简单！首先，按照使用手册[下载并安装](./installation.md), 然后查看 [入门指南](https://gradle.org/guides/#getting-started) 来创建您的第一个项目。
 如果您目前正在使用Maven, 可以参考 [Gradle 与 Maven 的对比](https://gradle.org/maven-vs-gradle/) 并根据 [Maven迁移到Gradle指南](https://guides.gradle.org/migrating-from-maven/) 来完成迁移。
 
 ## 使用现有的Gradle构建
