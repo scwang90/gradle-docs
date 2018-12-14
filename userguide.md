@@ -24,9 +24,9 @@ Gradle是一个关注灵活性和性能的开源自动化构建工具。Gradle�
 
 Gradle 支持许多主流的IDE，包括 **Android Studio、Eclipse、IntelliJ IDEA、Visual Studio 2017 和 Xcode**。您也可以通过本地终端或服务器中的命 [令行界面](https://docs.gradle.org/current/userguide/command_line_interface.html#command_line_interface) 调用Gradle。[Gradle build scans](https://scans.gradle.com/) 可以帮您理解构建返回的结果，提高构建性能，并协作更快地修复问题。
 
-![Gradle in IDE](art/gradle_in_ide.png)
-![Command Line](art/gradle_command_line.png)
-![Build Scan](art/gradle_build_scan.png)
+![Gradle in IDE](art/gradle-in-ide.png)
+![Command Line](art/gradle-command-line.png)
+![Build Scan](art/gradle-build-scan.png)
 
 ## 获取帮助
 
