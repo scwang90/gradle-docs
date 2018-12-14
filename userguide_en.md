@@ -30,3 +30,15 @@ You can also invoke Gradle via its [command-line interface](command_line_interfa
 ![](art/gradle_in_ide.png)
 ![](art/gradle_command_line.png)
 ![](art/gradle_build_scan.png)
+
+## Getting help
+
+ * **Forum** — The fastest way to get help is through the link:https://discuss.gradle.org[Gradle Forum, title="Gradle help and discussion forums"]. Community members and core contributors answer your questions.
+ * **Training** — Free, web-based Gradle training from Gradle developers happens every month. Head over to the link:{website}/training/[training page, title="Gradle training schedule"] to sign up.
+ * **Enterprise Services** — Support and training can be purchased alongside a link:https://gradle.com/enterprise[Gradle Enterprise] subscription.
+
+## Licenses
+
+[.legalnotice]
+Gradle build tool source code is open and licensed under the link:https://github.com/gradle/gradle/blob/master/LICENSE[Apache License 2.0].
+Gradle user manual and DSL references are licensed under link:http://creativecommons.org/licenses/by-nc-sa/4.0/[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License].

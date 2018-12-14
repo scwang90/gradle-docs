@@ -4,9 +4,9 @@
 
 ## 在开始之前
 
-为了有效地使用Gradle，您需要知道它是什么，并理解它的一些基本概念。所以在你认真使用Gradle之前，我们强烈推荐你阅读 [什么是Gradle?](https://docs.gradle.org/current/userguide/what_is_gradle.html#what_is_gradle)
+为了有效地使用Gradle，您需要知道它是什么，并理解它的一些基本概念。所以在你认真使用Gradle之前，我们强烈推荐你阅读 [什么是Gradle?](./what_is_gradle.md)
 
-即使你有使用Gradle的经验，我们建议你阅读[关于Gradle你需要知道的5件事](https://docs.gradle.org/current/userguide/what_is_gradle.html#five_things)，因为它澄清了一些常见的误解。
+即使你有使用Gradle的经验，我们建议你阅读[关于Gradle你需要知道的5件事](./what_is_gradle.md#关于Gradle你需要知道的5件事)，因为它澄清了一些常见的误解。
 
 ## 安装
 
@@ -68,7 +68,7 @@ Gradle项目都遵守标准的项目结构和约定的任务，如果你熟悉�
 
 1. 尝试一到两个 [基本教程](#尝试使用Gradle)，看看Gradle构建是什么样子的，特别是那些与您使用的项目类型(Java、native、Android等等)匹配的类型。
 
-2. 确保你已经阅读了 [关于Gradle你需要知道的5件事](https://docs.gradle.org/current/userguide/what_is_gradle.html#five_things)!
+2. 确保你已经阅读了 [关于Gradle你需要知道的5件事](./what_is_gradle.md#关于Gradle你需要知道的5件事)!
 
 3. 了解Gradle项目的基本元素：[项目](https://docs.gradle.org/current/userguide/tutorial_using_tasks.html#sec:projects_and_tasks)、[任务](https://docs.gradle.org/current/userguide/more_about_tasks.html#more_about_tasks) 和 [文件API](https://docs.gradle.org/current/userguide/working_with_files.html#working_with_files)。
 
