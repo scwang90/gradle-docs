@@ -2,7 +2,7 @@
 
 ## 手册分类
 
- - [用户手册](/art/userguide.md)
+ - [用户手册](./userguide.md)
  - [教程和指南](https://guides.gradle.org/)
  - [版本发布](https://docs.gradle.org/current/release-notes.html)
  - Gradle Api
