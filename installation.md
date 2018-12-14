@@ -128,7 +128,7 @@ OS:           Mac OS X 10.13.3 x86_64
 ## 下一步
 
 现在您已经安装了Gradle，可以使用下列资源开始学习:
-- 按照 [创建新的Gradle项目](https://guides.gradle.org/creating-new-gradle-builds/) 教程创建您的第一个Gradle项目。
+- 按照 [创建新的Gradle项目](./creating-new-gradle-builds.md/) 教程创建您的第一个Gradle项目。
 - 注册一个与核心工程师一起的 [入门级培训](https://gradle.org/training/intro-to-gradle/)。
 - 了解如何通过 [命令行界面](https://docs.gradle.org/current/userguide/command_line_interface.html#command_line_interface) 完成常见任务。
 - [配置Gradle](https://docs.gradle.org/current/userguide/build_environment.html#build_environment) ，例如使用HTTP代理下载依赖项。

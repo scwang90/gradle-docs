@@ -2,15 +2,6 @@
 
 按照本文档，您将创建一个简单的Gradle项目，调用一些基本的Gradle命令，并了解Gradle如何管理这个项目
 
-What you’ll need
-About 11 minutes
-
-A terminal application
-
-A Java Runtime Environment (JRE) or Java Development Kit (JDK), version 1.8 or later (only necessary to run Gradle)
-
-A Gradle distribution, version 4.10-rc-2 or better
-
 ## 你需要什么
 
 - 大约11分钟
@@ -29,7 +20,7 @@ A Gradle distribution, version 4.10-rc-2 or better
 ❯ cd basic-demo
 ```
 
-现在我们可以使用Gradle的 `gradle init` 命令来生成一个简单的项目。我们将观察生成的所有内容，以便您确切地知道发生了什么。
+现在我们可以使用Gradle的 `gradle init` 命令来生成一个简单的项目。然后查看生成的所有内容，以便知道发生了什么。
 
 ```
 ❯ gradle init 
@@ -82,9 +73,9 @@ BUILD SUCCESSFUL in 3s
 
 ## 创建一个任务
 
-Gradle提供了用于通过基于Groovy或Kotlin的DSL创建和配置任务的API。 `Project` （项目）包括一组任务，每个任务执行一些基本操作。
+Gradle提供了用于通过基于Groovy或Kotlin的DSL脚本创建和配置任务的API。 `Project` （项目）包括一组任务，每个任务执行一些基本操作。
 
-Gradle提供了一个任务库，您可以在自己的项目中配置它。例如，有一个名为Copy的核心类型，它将文件从一个位置复制到另一个位置。复制任务非常有用（[参阅文档](https://docs.gradle.org/4.10-rc-2/dsl/org.gradle.api.tasks.Copy.html)了解详细信息），但是在这里，让我们再次保持简单。执行以下步骤:
+Gradle提供了一个任务库，您可以在自己的项目中配置它。例如，有一个名为Copy的核心任务类型，它将文件从一个位置复制到另一个位置。复制任务非常有用（[参阅文档](https://docs.gradle.org/4.10-rc-2/dsl/org.gradle.api.tasks.Copy.html)了解详细信息），但是在这里，让我们再次保持简单。执行以下步骤:
 
 1. 创建一个名为 `src` 的目录。
 2. 在 `src` 目录中添加一个名为 `myfile.txt` 的文件。内容可以是任意的（甚至可以是空的），但是为了方便起见，可以添加一行`Hello, World!`。
@@ -179,7 +170,7 @@ BUILD SUCCESSFUL in 0s
 
 ## 探索和调试项目
 
-让我们看看在我们的新项目中还可以用Gradle做些什么。在 [命令行界面](https://docs.gradle.org/4.10-rc-2/userguide/command_line_interface.html) 中也同样适用。
+让我们看看在我们的新项目中还可以用Gradle做些什么。我们可以在 [命令行界面](https://docs.gradle.org/4.10-rc-2/userguide/command_line_interface.html) 中完成。
 
 ### 发现可用的任务
 
@@ -247,9 +238,10 @@ BUILD SUCCESSFUL in 0s
 ### 分析和调试项目
 
 Gradle还提供了一个丰富的、基于web的构建视图，叫做 [build scan](https://scans.gradle.com/?_ga=2.134882550.684300287.1544663167-1676616677.1544663167)（构建扫描）。
+
 ![](./art/basic-demo-build-scan.png)
 
-通过使用 `--scan` 选项或显式地将 `build scan` 插件应用到项目中，您可以在 [scans.gradle.com](scans.gradle.com) 中免费创建一个 `build scan`。将 `构建扫描` 发布到 [scans.gradle.com](scans.gradle.com) 会将此数据传输到Gradle的服务器。要将数据保存在自己的服务器上，请查看 [Gradle 企业版]（https://gradle.com/enterprise?_ga=2.134545782.684300287.1544663167-1676616677.1544663167）。
+通过使用 `--scan` 选项或显式地将 `build scan` 插件应用到项目中，您可以在 [scans.gradle.com](scans.gradle.com) 中免费创建一个 `build scan`。将 `构建扫描` 发布到 [scans.gradle.com](scans.gradle.com) 会将此数据传输到Gradle的服务器。要将数据保存在自己的服务器上，请查看 [Gradle 企业版](https://gradle.com/enterprise?_ga=2.134545782.684300287.1544663167-1676616677.1544663167)。
 
 尝试在执行任务时添加 `--scan` 来创建构建扫描。
 
@@ -305,7 +297,22 @@ BUILD SUCCESSFUL
 您可以更改许多属性。 例如，您可以尝试将以下行添加到 `build.gradle` 脚本件中，然后重新执行gradle属性。
 
 ```gradle
-description = "A trivial Gradle build"
 version = "1.0"
+description = "A trivial Gradle build"
 ```
+
+## 下一步
+
+恭喜你!您已经学会了创建一个新的Gradle项目，并学习了如何检查Gradle构建!
+
+您可能想要为特定的平台创建一个库或应用程序，因此这里有一些 *使用指南*，将教你如何在选择的平台中创建构建：
+
+- [构建 Android 应用](https://guides.gradle.org/building-android-apps)
+- [构建 Java库](https://guides.gradle.org/building-java-libraries)
+- [构建 Kotlin JVM 库](https://guides.gradle.org/building-kotlin-jvm-libraries)
+- [构建 C++ 可执行文件](https://guides.gradle.org/building-cpp-executables)
+- [构建 Groovy 库](https://guides.gradle.org/building-groovy-libraries)
+- [构建 Scala 库](https://guides.gradle.org/building-scala-libraries)
+
+您也可以在 [Github](https://github.com/gradle/gradle/tree/master/subprojects/docs/src/samples) 上获取实例项目。
 
