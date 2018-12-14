@@ -8,6 +8,7 @@
 ## 已翻译的内容
 
 - [课程目录](./directory.md)
+- [什么是Gradle?](./what-is-gradle.md)
 - [课程介绍](./userguide.md)
 - [下载安装](./installation.md)
-- [入门教程](./getting_started.md)
+- [入门指南](./getting-started.md)

@@ -27,9 +27,9 @@ Gradle supports many major IDEs, including **Android Studio, Eclipse, IntelliJ I
 You can also invoke Gradle via its [command-line interface](command_line_interface.adoc#command_line_interface) in your terminal or through your continuous integration server.
 [Gradle build scans](link:https://scans.gradle.com/) help you understand build results, improve build performance, and collaborate to fix problems faster.
 
-![](art/gradle_in_ide.png)
-![](art/gradle_command_line.png)
-![](art/gradle_build_scan.png)
+![Gradle in IDE](art/gradle-in-ide.png)
+![Command Line](art/gradle-command-line.png)
+![Build Scan](art/gradle-build-scan.png)
 
 ## Getting help
 

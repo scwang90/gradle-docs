@@ -15,7 +15,7 @@
 
 ## 用户手册
 
- - [入门指南](./getting_started.md)
+ - [入门指南](./getting-started.md)
  - [Gradle安装](./installation.md)
  - [Gradle升级](https://docs.gradle.org/current/userguide/upgrading_version_4.html)
  - 迁移到Gradle
