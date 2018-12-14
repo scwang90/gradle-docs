@@ -16,7 +16,7 @@
 ## 用户手册
 
  - [入门指南](./getting_started.md)
- - [Gradle安装](https://docs.gradle.org/current/userguide/installation.html)
+ - [Gradle安装](./installation.md)
  - [Gradle升级](https://docs.gradle.org/current/userguide/upgrading_version_4.html)
  - 迁移到Gradle
  > 1. [从Maven迁移](https://guides.gradle.org/migrating-from-maven/)
