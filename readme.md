@@ -16,3 +16,4 @@
 - [创建新的Gradle项目](./creating-new-gradle-builds.md)
 - [创建Java库项目](./building-java-libraries.md)
 - [打包并发布](./artiface-management.md)
+- [自定义任务](./writing-gradle-tasks.md)
