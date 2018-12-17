@@ -28,7 +28,7 @@
 - [构建c++库](https://guides.gradle.org/building-cpp-libraries/)
 - [创建 build scans](https://guides.gradle.org/creating-build-scans/) (构建扫描)
 
-还有许多其他 [教程和指南](https://guides.gradle.org/) 可供选择，您可以根据类别进行筛选——例如 [基础知识](https://guides.gradle.org/?q=Fundamentals)。
+还有许多其他 [教程和指南](/tutorials-guides.md 可供选择，您可以根据类别进行筛选——例如 [基础知识](https://guides.gradle.org/?q=Fundamentals)。
 
 # 命令行 和 IDE（集成开发环境）
 
@@ -78,7 +78,7 @@ Gradle项目都遵守标准的项目结构和约定的任务，如果你熟悉�
 
 6. 学习如何 [编写可维护的构建脚本](https://docs.gradle.org/current/userguide/authoring_maintainable_build_scripts.html#authoring_maintainable_build_scripts)，并 [更好地组织Gradle项目](https://docs.gradle.org/current/userguide/organizing_gradle_projects.html#organizing_gradle_projects)。
 
-用户手册包含了许多其他有用的信息，你可以在 [Gradle指南](https://guides.gradle.org/) 中找到更多关于各种Gradle特性的教程。
+用户手册包含了许多其他有用的信息，你可以在 [Gradle指南](/tutorials-guides.md 中找到更多关于各种Gradle特性的教程。
 
 ## 集成第三方工具
 

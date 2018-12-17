@@ -3,7 +3,7 @@
 ## 手册分类
 
  - [用户手册](./userguide.md)
- - [教程和指南](https://guides.gradle.org/)
+ - [教程和指南](/tutorials-guides.md
  - [版本发布](https://docs.gradle.org/current/release-notes.html)
  - Gradle Api
  > 1. [Java 文档](https://docs.gradle.org/current/javadoc/overview-summary.html)
