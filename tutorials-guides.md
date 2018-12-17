@@ -114,7 +114,7 @@
 
 > 11分钟
 
-### [自定义Gradle任务](https://guides.gradle.org/writing-gradle-tasks/)
+### [自定义Gradle任务](./writing-gradle-tasks.md)
 
 学习如何使用内置DSL编写可重用的Gradle任务和创建自己的任务类。
 
