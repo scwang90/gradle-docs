@@ -12,4 +12,7 @@
 - [课程介绍](./userguide.md)
 - [下载安装](./installation.md)
 - [入门指南](./getting-started.md)
+- [教程和手册](./tutorials-guides.md)
 - [创建新的Gradle项目](./creating-new-gradle-builds.md)
+- [创建Java库项目](./building-java-libraries.md)
+- [打包并发布](./artiface-management.md)

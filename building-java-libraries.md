@@ -1,6 +1,6 @@
 # 构建Java项目
 
-本教程将指导您使用Gradle的 `Init` 插件来生成一个让能其他Jvm库或应用使用的Jvm库。
+本教程将指导您使用Gradle的 `Init` 插件来生成一个Jvm库。
 
 ## 你要构建什么
 
@@ -26,7 +26,7 @@ $ cd building-java-libraries
 
 ## 运行 Init 任务
 
-在新项目目录中，使用 `java-library` 参数运行 `init` 任务。
+在新目录中，使用 `java-library` 参数运行 `init` 任务。
 
 **If you prefer the Groovy DSL**
 ```
@@ -88,17 +88,17 @@ BUILD SUCCESSFUL in 0s
             └── LibraryTest.java
 ```
 
-**wrapper** wrapper（包装器）文件的文件夹
-**main/java** Java源文件文件夹
-**test/java** Java测试文件夹
+**wrapper** wrapper（包装器）文件的文件夹  
+**main/java** Java源文件文件夹  
+**test/java** Java测试文件夹  
 
 现在您已经拥有了一个简单Java库项目所需的组件。
 
 ## 检查生成的项目文件
 
-生成的 *settings.gradle* （设置文件）被大量注释，但只有一行是有效的:
+生成的 *settings.gradle* （设置文件）添加了很多的注释，但只有一行是有效的:
 
-**生成的 settings.gradle 文件 groocy 版本**
+**生成的 settings.gradle 文件 Groovy 版本**
 ```
 /*
  * 这个文件是由Gradle 'init'任务生成的。
@@ -107,16 +107,16 @@ BUILD SUCCESSFUL in 0s
 rootProject.name = 'building-java-libraries' 
 ```
 
-**生成的 settings.gradle 文件 kotlin 版本**
+**生成的 settings.gradle.kts 文件 Kotlin 版本**
 ```
 rootProject.name = "building-java-libraries"
 ```
 
 > 这行代码指定了根项目的名称
 
-生成的 *build.gradle* 文件也被大量注释了，下面是有效的代码副本：
+生成的 *build.gradle* 文件也被大量注释了，下面是有效的代码内容：
 
-**生成的 build.gradle 文件 groocy 版本**
+**生成的 build.gradle 文件 Groovy 版本**
 ```
 plugins {
     id 'java-library'
@@ -138,7 +138,7 @@ dependencies {
 }
 ```
 
-**生成的 build.gradle 文件 kotlin 版本**
+**生成的 build.gradle.kts 文件 Kotlin 版本**
 ```
 plugins {
     `java-library`
@@ -160,7 +160,7 @@ dependencies {
 }
 ```
 
-该构建脚本添加了 [java-libaray](https://docs.gradle.org/5.0/userguide/java_library_plugin.html) 插件。它扩展了`java-base` 插件并添加了编译Java源代码任务的。
+该构建脚本添加了 [java-libaray](https://docs.gradle.org/5.0/userguide/java_library_plugin.html) 插件。它继承了`java-base` 插件并添加了编译Java源代码任务的。
 
 这是 `src/main/java/jvm/library/Library.java` 的内容。
 
@@ -193,9 +193,9 @@ public class LibraryTest {
 }
 ```
 
-生成的测试类有一个简单的 [JUnit 4] 测试。测试实例化 `libaray` 类，调用`someLibraryMethod`方法，并检查返回值是否为“true”。
+生成的测试类有一个简单的 [JUnit 4](http://junit.org/junit4/) 测试。测试实例化 `libaray` 类，调用`someLibraryMethod`方法，并检查返回值是否为“true”。
 
-## 打包为Jar
+## 打成Jar包 
 
 构建项目，只需要运行 `build` 任务。你可以使用全局的 `gradle` 命令，但是当一个项目包含了 wrapper （包装器） 脚本。建议使用  `gradlew` 命令比较好。
 
@@ -246,11 +246,11 @@ Library.class
 
 你可能最需要的是指定 Jar 文件的 版本。这个在构建脚本中使用顶级 `version` （版本）属性很容易实现，如下：
 
-**build.gradle groovy版本**
+**build.gradle Groovy 版本**
 ```java
 version = '0.1.0'
 ```
-**build.gradle kotlin版本**
+**build.gradle.kts Kotlin 版本**
 ```java
 version = "0.1.0"
 ```
@@ -259,7 +259,7 @@ version = "0.1.0"
 
 另一个常见的需求是定制清单文件，通常是添加一个或多个属性。让我们 [配置jar任务](https://docs.gradle.org/5.0/userguide/more_about_tasks.html#sec:configuring_tasks) 在清单文件中包含库名和版本。在构建脚本的末尾添加以下内容:
 
-**build.gradle groovy版本**
+**build.gradle Groovy 版本**
 ```java
 jar {
     manifest {
@@ -268,7 +268,7 @@ jar {
     }
 }
 ```
-**build.gradle kotlin版本**
+**build.gradle.kts Kotlin 版本**
 ```java
 tasks {
     jar {
@@ -291,7 +291,7 @@ $ jar xf build/libs/building-java-libraries-0.1.0.jar META-INF/MANIFEST.MF
 
 现在查看 `META-INF/MANIFEST.MF` 的内容如下:
 
-```js
+```mf
 Manifest-Version: 1.0
 Implementation-Title: building-java-libraries
 Implementation-Version: 0.1.0
@@ -300,5 +300,56 @@ Implementation-Version: 0.1.0
 > **了解关于配置jar的更多信息**  
 > `manifest ` 只是jar任务上可以配置的许多属性之一。有关完整列表，请参见 [Gradle语言参考](https://docs.gradle.org/5.0/dsl/) 的 [Jar部分](https://docs.gradle.org/5.0/dsl/org.gradle.api.tasks.bundling.Jar.html) 以及 [Gradle用户手册](./use) 的 [Jar](https://docs.gradle.org/5.0/userguide/java_plugin.html#sec:jar) 和 [创建归档](https://docs.gradle.org/5.0/userguide/working_with_files.html#sec:archives) 部分。
 
+现在，您可以通过尝试编译一些使用刚构建的库的Java代码来完成这个练习。
 
+## 添加API文档
+
+`java-library` 插件可以通过 `javadoc` 任务来支持Java的API文档工具。
+
+Build Init插件生成的代码已经对 `Library.java` 文件进行了注释。将注释修改为 `javadoc` 标记。
+
+**src/main/java/Library.java**
+```java
+package jvm.library;
+
+public class Library {
+    public boolean someLibraryMethod() {
+        return true;
+    }
+}
+```
+
+运行 `javadoc` 任务.
+
+```bat
+$ ./gradlew javadoc
+
+> Task :compileJava
+> Task :processResources NO-SOURCE
+> Task :classes
+> Task :javadoc
+
+BUILD SUCCESSFUL in 1s
+2 actionable tasks: 2 executed
+```
+
+你可以在 `build/docs/javadoc/index.html` 找到 `javadoc` 生产的HTML文件。
+
+## 总结
+
+就是这样!现在您已经成功地构建了Java库项目，将其打包为JAR并在单独的应用程序中使用它。一路上，你学会了如何:
+
+- 生成Java库
+- 调整生成的 `build.gradle` 和示例结构化的Java文件
+- 运行构建并查看测试报告
+- 自定义JAR文件的名称及其清单的内容
+- 生成API文档。
+
+## 下一步
+
+构建库只是跨项目重用代码的一个方面。你可能还会感兴趣:
+
+- [使用JVM库](https://docs.gradle.org/5.0/userguide/artifact_dependencies_tutorial.html)
+- [发布JVM库](.//artifact-management.md)
+- [处理多项目构建](https://docs.gradle.org/5.0/userguide/intro_multi_project_builds.html)
 
