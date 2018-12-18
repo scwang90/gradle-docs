@@ -42,7 +42,7 @@ Gradle是一个灵活、强大的构建工具，当您刚开始使用它的时�
 
    图1所示. 两个梯度任务图的例子
 
-   几乎任何构建过程都可以用这种方式建模为任务图，这也是Gradle如此灵活的原因之一。任务图可以由插件和您自己的构建脚本定义，任务通过 [任务依赖机制](https://docs.gradle.org/current/userguide/tutorial_using_tasks.html#sec:task_dependencies) 链接在一起。
+   几乎任何构建过程都可以用这种方式建模为任务图，这也是Gradle如此灵活的原因之一。任务图可以由插件和您自己的构建脚本定义，任务通过 [任务依赖机制](./tutorial-using-tasks.md#sec:task_dependencies) 链接在一起。
 
    任务本身包括:
    - 动作 —— 完成某些事情的工作片段，如复制文件或编译源代码

@@ -192,7 +192,7 @@ taskX
 `taskX` 依赖 `taskY` 的时候，`taskY` 还没有声明定义。这个在多项目构建中非常重要。关于任务依赖更多详细信息请参考 [给任务添加依赖](https://docs.gradle.org/current/userguide/more_about_tasks.html#sec:adding_dependencies_to_tasks)。
 
 
-不过需要注意，在引用尚未定义的任务时，不能使用 [快捷表示法](https://docs.gradle.org/current/userguide/tutorial_using_tasks.html#sec:shortcut_notations)。
+不过需要注意，在引用尚未定义的任务时，不能使用 [快捷表示法](./tutorial-using-tasks.md#sec:shortcut_notations)。
 
 ## 动态任务
 

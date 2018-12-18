@@ -228,4 +228,4 @@ Guten Tag, Welt!
 ## 下一步
 
 - 在构建脚本中直接写类将很快导致混乱且可能变成不可维护的脚本。学习如何 [组织构建逻辑](https://docs.gradle.org/5.0/userguide/organizing_build_logic.html)。
-- 阅读更多关于 [使用任务](https://docs.gradle.org/current/userguide/tutorial_using_tasks.html)、[预定义任务和任务类型](https://docs.gradle.org/5.0/dsl/org.gradle.api.Task.html) 的信息。
+- 阅读更多关于 [使用任务](./tutorial-using-tasks.md)、[预定义任务和任务类型](https://docs.gradle.org/5.0/dsl/org.gradle.api.Task.html) 的信息。

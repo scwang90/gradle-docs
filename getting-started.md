@@ -70,7 +70,7 @@ Gradle项目都遵守标准的项目结构和约定的任务，如果你熟悉�
 
 2. 确保你已经阅读了 [关于Gradle你需要知道的5件事](./what-is-gradle.md#关于Gradle你需要知道的5件事)!
 
-3. 了解Gradle项目的基本元素：[项目](https://docs.gradle.org/current/userguide/tutorial_using_tasks.html#sec:projects_and_tasks)、[任务](https://docs.gradle.org/current/userguide/more_about_tasks.html#more_about_tasks) 和 [文件API](https://docs.gradle.org/current/userguide/working_with_files.html#working_with_files)。
+3. 了解Gradle项目的基本元素：[项目](./tutorial-using-tasks.md#sec:projects_and_tasks)、[任务](https://docs.gradle.org/current/userguide/more_about_tasks.html#more_about_tasks) 和 [文件API](https://docs.gradle.org/current/userguide/working_with_files.html#working_with_files)。
 
 4. 如果您正在为JVM构建软件，请务必阅读在 [构建Java & JVM项目](https://docs.gradle.org/current/userguide/building_java_projects.html#building_java_projects) 和在 [Java & JVM项目中测试](https://docs.gradle.org/current/userguide/java_testing.html#java_testing) 这些类型的项目的细节。
 
