@@ -40,7 +40,7 @@
 ## 使用Gradle
 
  - 基础知识
-> 1. [脚本基本](./tutorial-using-tasks.md)
+> 1. [基本任务](./tutorial-using-tasks.md)
 > 2. [处理任务](https://docs.gradle.org/current/userguide/more_about_tasks.html)
 > 3. [更多知识](https://docs.gradle.org/current/userguide/writing_build_scripts.html)
 > 4. [文件处理](https://docs.gradle.org/current/userguide/working_with_files.html)

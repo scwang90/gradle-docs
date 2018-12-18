@@ -1,6 +1,6 @@
 # 脚本基本知识
 
-本章向您介绍编写Gradle构建脚本的基本知识。要获得快速的实践介绍，请尝试 [创建新的Gradle构建指南](https://guides.gradle.org/creating-new-gradle-builds/)。
+本章向您介绍编写Gradle构建脚本的基本知识。要获得快速的实践介绍，请尝试 [创建新的Gradle构建指南](./creating-new-gradle-builds.md)。
 
 ## 项目与任务
 
@@ -18,7 +18,7 @@ Gradle的一切都基于两个基本概念:项目和任务。
 
 为此，可以根据下面内容创建名为 `build.gradle` 的构建脚本。
 
-*例1.您的第一个构建脚本*
+*示例1. 您的第一个构建脚本*
 
 **build.gradle**
 ```groovy
@@ -39,10 +39,10 @@ task("hello") {
 
 在命令行shell中（或 cmd），进入到 `build.gradle` 的目录并使用 `gradle -q hello` 执行构建脚本:
 
-> **-q是做什么的?**  
-> 本用户指南中的大多数示例都使用 `-q` 命令行选项运行。这会抑制Gradle的日志消息，以便只显示任务的输出。这使得本用户指南中的示例输出更加清晰。如果您不想使用此选项，则不需要使用此选项。有关影响Gradle输出的命令行选项的更多细节，请参见 [日志](https://docs.gradle.org/current/userguide/logging.html#logging)。
+> **-q 是做什么的？**  
+> 本用户指南中的大多数示例都使用 `-q` 命令行选项运行。这会关闭  Gradle 的日志消息，以便只显示任务的输出。这使得本用户指南中的示例输出更加清晰。如果你需要看详细的日志信息，去掉本参数即可。有关影响Gradle 输出的命令行选项的更多细节，请参见 [日志](https://docs.gradle.org/current/userguide/logging.html#logging)。
 
-*例2.构建脚本的执行*
+*示例2. 构建脚本的执行*
 
 **输出结果来自命令：gradle -q hello**
 ```
@@ -58,7 +58,7 @@ Hello world!
 
 Gradle 的构建脚本提供了 Groovy 和 Kotlin 的全部功能支持。作为开胃菜，看看这个:
 
-*例3.在Gradle的任务中使用Groovy或Kotlin*
+*示例3. 在 Gradle 的任务中使用 Groovy 或 Kotlin*
 
 **build.gradle**
 ```groovy
@@ -152,7 +152,7 @@ I'm Gradle
 
 要添加依赖任务的时候，不要求当前存在的任务，也可以是后面添加的任务。
 
-*例6.懒惰依赖 —— 另一个任务不存在*
+*示例6. 惰性依赖 —— 另一个任务不存在*
 
 **build.gradle**
 ```groovy
@@ -192,13 +192,13 @@ taskX
 `taskX` 依赖 `taskY` 的时候，`taskY` 还没有声明定义。这个在多项目构建中非常重要。关于任务依赖更多详细信息请参考 [给任务添加依赖](https://docs.gradle.org/current/userguide/more_about_tasks.html#sec:adding_dependencies_to_tasks)。
 
 
-不过需要注意，在引用尚未定义的任务时，不能使用 [快捷表示法](./tutorial-using-tasks.md#sec:shortcut_notations)。
+不过需要注意，在引用尚未定义的任务时，不能使用 [快捷表示法](#快捷符号)。
 
 ## 动态任务
 
-Groovy或Kotlin的强大功能不仅可以用于定义任务的功能。例如，您还可以使用它来动态创建任务。
+Groovy 或 Kotlin 的强大功能不仅可以用于定义任务的功能。例如，您还可以使用它来动态创建任务。
 
-*例7.任务的动态创建*
+*示例7. 任务的动态创建*
 
 **build.gradle**
 ```groovy
@@ -230,7 +230,7 @@ I'm task number 1
 
 一旦创建了任务，就可以通过API访问它们。例如，您可以使用它在运行时动态地向任务添加依赖项。而在 Ant 中不支持这样的操作。
 
-*示例8.通过API访问任务——添加依赖项*
+*示例8. 通过 API 访问任务 —— 添加依赖项*
 
 **build.gradle**
 ```groovy
@@ -254,7 +254,7 @@ repeat(4) { counter ->
 }
 tasks["task0"].dependsOn("task2", "task3")
 ```
-**Output of gradle -q task0**
+**输出结果来自命令：gradle -q task0**
 ```bat
 > gradle -q task0
 I'm task number 2
@@ -263,7 +263,7 @@ I'm task number 0
 ```
 你还可以向现有任务添加行为。
 
-*示例9.通过API添加行为访问任务*
+*示例9. 通过 API 添加行为访问任务*
 
 **build.gradle**
 ```groovy
@@ -303,7 +303,7 @@ hello.apply {
     }
 }
 ```
-**Output of gradle -q hello**
+**输出结果来自命令：gradle -q hello**
 ```bat
 > gradle -q hello
 Hello Venus
@@ -314,11 +314,11 @@ Hello Jupiter
 
 `doFirst` 和 `doLast` 可以调用多次。它们将一个操作添加到任务操作列表的开头或结尾。当任务执行时，将按顺序执行操作列表中的操作。
 
-## Groovy DSL快捷符号
+## 快捷符号
 
-访问现有任务有一种快捷的表示法。每个任务都可以作为构建脚本的属性使用:
+访问现有任务有一种快捷的表示法：Groovy DSL。每个任务都可以作为构建脚本的属性使用:
 
-*示例10.将任务作为构建脚本的属性访问*
+*示例10. 将任务作为构建脚本的属性访问*
 
 **build.gradle**
 ```groovy
@@ -331,7 +331,7 @@ hello.doLast {
     println "Greetings from the $hello.name task."
 }
 ```
-**Output of gradle -q hello**
+**输出结果来自命令：gradle -q hello**
 ```
 > gradle -q hello
 Hello world!
@@ -344,7 +344,7 @@ Greetings from the hello task.
 
 您可以将自己的属性添加到任务中。要添加名为 `myProperty` 的属性需要给 `ext.myProperty` 初始值。然后就可以像读取和设置预定义的任务属性一样读取和设置属性。
 
-*例11.向任务添加额外属性*
+*示例11. 向任务添加额外属性*
 
 **build.gradle**
 ```groovy
@@ -359,7 +359,7 @@ task printTaskProperties {
 }
 ```
 **build.gradle.kts**
-```groovy
+```kotlin
 task("myTask") {
     extra["myProperty"] = "myValue"
 }
@@ -370,7 +370,7 @@ task("printTaskProperties") {
     }
 }
 ```
-**Output of gradle -q printTaskProperties**
+**输出结果来自命令：gradle -q printTaskProperties**
 ```
 > gradle -q printTaskProperties
 myValue
@@ -382,7 +382,8 @@ myValue
 
 Gradle 中内嵌了 Ant 完整的子系统 （Ant tasks are first-class citizens in Gradle）。Gradle 可以在 Groovy 的基础上通过简单地依赖配置方便的集成 Ant 任务。Groovy 附带了出色的 `AntBuilder` 。使用Gradle 中的 Ant 任务与使用 `build.xml` 文件中的 Ant 任务一样方便和强大。Kotlin也可以使用。从下面的例子中，您可以学习如何执行 Ant 任务以及如何访问 Ant 属性:
 
-*示例12.使用 AntBuilder 执行 ant.loadfile target*
+*示例12. 使用 AntBuilder 执行 ant.loadfile target*
+
 **build.gradle**
 ```groovy
 task loadfile {
@@ -399,7 +400,7 @@ task loadfile {
 }
 ```
 **build.gradle.kts**
-```groovy
+```kotlin
 task("loadfile") {
     doLast {
         val files = file("./antLoadfileResources").listFiles().sorted()
@@ -415,7 +416,7 @@ task("loadfile") {
     }
 }
 ```
-**Output of gradle -q loadfile**
+**输出结果来自命令：gradle -q loadfile**
 ```bat
 > gradle -q loadfile
  *** agile.manifesto.txt ***
@@ -430,11 +431,12 @@ Make the impossible possible, make the possible easy and make the easy elegant.
 
 在构建脚本中，您可以使用 Ant 做更多的事情。你可以在 [Ant文档](https://docs.gradle.org/current/userguide/ant.html#ant) 中找到更多信息。
 
-## 使用方法
+## 方法提取
 
-Gradle 在如何组织构建逻辑方面具有伸缩性。对于上述示例，组织构建逻辑的第一级是提取方法。
+Gradle 在如何组织构建逻辑方面具有伸缩性。对于上述示例，组织构建逻辑的最需要的优化是提取方法。
 
-*示例13.使用方法组织构建逻辑*
+*示例13. 方法提取组织构建逻辑*
+
 **build.gradle**
 ```groovy
 task checksum {
@@ -460,7 +462,7 @@ File[] fileList(String dir) {
 }
 ```
 **build.gradle.kts**
-```groovy
+```kotlin
 task("checksum") {
     doLast {
         fileList("./antLoadfileResources").forEach { file ->
@@ -486,7 +488,7 @@ task("loadfile") {
 fun fileList(dir: String): List<File> =
     file(dir).listFiles { file: File -> file.isFile }.sorted()
 ```
-**Output of gradle -q loadfile**
+**输出结果来自命令：gradle -q loadfile**
 ```
 > gradle -q loadfile
 I'm fond of agile.manifesto.txt
@@ -499,7 +501,8 @@ I'm fond of gradle.manifesto.txt
 
 Gradle允许您定义一个或多个默认任务，如果没有指定其他任务，将执行这些任务。
 
-*例14. 定义默认任务*
+*示例14. 定义默认任务*
+
 **build.gradle**
 ```groovy
 defaultTasks 'clean', 'run'
@@ -523,7 +526,7 @@ task other {
 }
 ```
 **build.gradle.kts**
-```groovy
+```kotlin
 defaultTasks("clean", "run")
 
 task("clean") {
@@ -544,7 +547,7 @@ task("other") {
     }
 }
 ```
-**Output of gradle -q**
+**输出结果来自命令：gradle -q**
 ```bat
 > gradle -q
 Default Cleaning!
@@ -555,11 +558,12 @@ Default Running!
 
 ### 使用DAG配置
 
-Gradle有一个配置阶段和一个执行阶段（详细查看 [构建什么周期](https://docs.gradle.org/current/userguide/build_lifecycle.html#build_lifecycle)）。在配置阶段之后，Gradle 会知道应该执行哪些任务。Gradle 提供了一个钩子来利用这些信息。用例之一是检查发布任务是否在要执行的任务中。根据这一点，您可以为某些变量分配不同的值。
+Gradle有一个配置阶段和一个执行阶段（详细查看 [构建周期](https://docs.gradle.org/current/userguide/build_lifecycle.html#build_lifecycle)）。在配置阶段之后，Gradle 会知道应该执行哪些任务。Gradle 提供了一个钩子来利用这些信息。用例之一是检查发布任务是否在要执行的任务中。根据这一点，您可以为某些变量分配不同的值。
 
-在下面的示例中，`distribution ` 和 `release ` 任务的执行将导致 `版本` 变量的不同值。
+在下面的示例中，`distribution ` 和 `release ` 任务的执行将导致 `version` 变量有不同的值。
 
 *15例. 构建的不同结果取决于所选择的任务*
+
 **build.gradle**
 ```groovy
 task distribution {
@@ -604,24 +608,25 @@ gradle.taskGraph.whenReady {
         else "1.0-SNAPSHOT"
 }
 ```
-**Output of gradle -q distribution**
+**输出结果来自命令：gradle -q distribution**
 ```bat
 > gradle -q distribution
 We build the zip with version=1.0-SNAPSHOT
 ```
-**Output of gradle -q release**
+**输出结果来自命令：gradle -q release**
 ```
 > gradle -q release
 We build the zip with version=1.0
 We release now
 ```
-重要的是 `whenReady` 会在执行发布任务之前影响发布任务。即使发布任务不是主要任务。
+重要的是 `whenReady` 会在执行 `release` 任务之前影响发布任务。即使 `release` 任务不是主要任务。
 
 ## 构建脚本的外部依赖项
 
-如果构建脚本需要使用外部库，可以将它们添加到构建脚本本身中的脚本类路径中。您可以使用 `buildscript()` 方法，传入一个声明构建脚本类路径的块。
+如果构建脚本需要使用外部库，可以将它们添加到构建脚本中的脚本 `classpath` 中。您可以使用 `buildscript()` 传入一个声明构建脚本`classpath` 的代码块。
 
 *示例16. 为构建脚本声明外部依赖关系*
+
 **build.gradle**
 ```groovy
 buildscript {
@@ -645,11 +650,11 @@ buildscript {
 }
 ```
 
-上面的代码块传递给 `buildscript()` 方法的块配置 [ScriptHandler](https://docs.gradle.org/current/javadoc/org/gradle/api/initialization/dsl/ScriptHandler.html) 实例。通过 `classpath` 配置添加依赖项来声明构建脚本类路径。这与声明Java编译类路径(例如)的方式相同。除了项目依赖项之外，您可以使用任何依赖项类型。
+上面的代码块传递给 `buildscript()` 库和依赖的代码块来配置 [ScriptHandler](https://docs.gradle.org/current/javadoc/org/gradle/api/initialization/dsl/ScriptHandler.html) 实例。通过 `classpath` 配置添加依赖项。这与声明 Java 编译类路径的方式相同。除了项目依赖项之外，您可以使用任何依赖项类型。
 
 添加了构建脚本依赖之后，就可以在构建脚本中直接使用依赖中的类来完成特定的工作了。下面的示例通过给构建脚本添加 `Base64` 的依赖来，完成对内容的 Base64 加密。
 
-**Output of gradle -q encode**
+**输出结果来自命令：gradle -q encode**
 ```bat
 > gradle -q encode
 aGVsbG8gd29ybGQK
@@ -665,7 +670,7 @@ aGVsbG8gd29ybGQK
 
 在这一章中，我们首先看了任务。但这并不是任务的结束。如果您想了解更多细节，请查看 [更多关于任务](https://docs.gradle.org/current/userguide/more_about_tasks.html#more_about_tasks) 的信息。
 
-或者，继续学习 [教程](https://docs.gradle.org/current/userguide/tutorial_java_projects.html#tutorial_java_projects) 和 [依赖关系管理](https://docs.gradle.org/current/userguide/dependency_management_for_java_projects.html#dependency_management_for_java_projects)。
+或者，继续学习 [Java构建教程](https://docs.gradle.org/current/userguide/tutorial_java_projects.html#tutorial_java_projects) 和 [依赖关系管理](https://docs.gradle.org/current/userguide/dependency_management_for_java_projects.html#dependency_management_for_java_projects)。
 
 
 
