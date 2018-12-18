@@ -18,3 +18,4 @@
 - [基本任务](./tutorial-using-tasks.md)
 - [打包并发布](./artiface-management.md)
 - [自定义任务](./writing-gradle-tasks.md)
+- [自定义Gradle插件](./writing-gradle-plugins.md)

@@ -120,7 +120,7 @@
 
 > 9分钟
 
-### [编写Gradle插件](https://guides.gradle.org/writing-gradle-plugins/)
+### [编写Gradle插件](./writing-gradle-plugins.md)
 
 编写一个简单的Gradle插件，实现适当的接口并创建一个自定义任务类来支持它。创建插件标识符和项目中使用新插件。
 
