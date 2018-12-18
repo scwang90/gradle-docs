@@ -1,0 +1,10 @@
+//apply plugin: org.example.greeting.GreetingPlugin
+plugins {
+  id 'org.example.greeting'
+}
+
+hello { 
+    message = "Hi"
+    recipient = "Gradle"
+}
+
